@@ -8,3 +8,11 @@ data = [
 ]
 
 print(Apriori.find_associations(data, 0.75))
+
+from helpers.ds_builder import DatasetBuilder
+
+ds = DatasetBuilder.generate_normal_distribution(['a', 'b', 'c', 'd', 'k'], 2, 4, 20)
+for el in ds:
+    print(el)
+print('------------------------')
+print(Apriori.find_associations(ds, 0.3))
