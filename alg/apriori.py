@@ -16,7 +16,8 @@ class Apriori:
         while True:
             if it == 0:
                 for item in itemset:
-                    curr.append([item])
+                    if Apriori._check_supp(transactions,supp,[item]):
+                        curr.append([item])
                 associations.append(curr.copy())
                 it += 1
                 continue

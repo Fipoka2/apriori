@@ -1,13 +1,19 @@
 from alg.apriori import Apriori
 
 data = [
-    [1, 3, 4],
-    [2, 3, 5],
-    [5, 2, 1, 2, 3],
-    [2, 5, 2],
+    [1,2,3,4,1,5,8],
+    [7,8,10,5,1,7,3,1],
+    [3,1,4,7,8,5],
+    [6,7,8,6,7],
+    [1,2,5,6,3,8],
+    [5,7,9,1,2,3,3,1],
+    [6,10],
+    [5,3,1,4,2,9,4,1,1,3],
+    [7,8,9,10,11,1],
+    [1,5,6,8,3,4],
 ]
 
-print(Apriori.find_associations(data, 0.75))
+print(Apriori.find_associations(data, 0.5))
 
 from helpers.ds_builder import DatasetBuilder
 

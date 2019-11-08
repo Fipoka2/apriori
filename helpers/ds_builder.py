@@ -1,5 +1,5 @@
-from scipy.stats import truncnorm
 import numpy as np
+from scipy.stats import truncnorm
 
 
 class DatasetBuilder:
@@ -28,7 +28,6 @@ class DatasetBuilder:
 
             ds.append(sample)
         return ds
-
 
     @classmethod
     def _get_truncated_normal(cls, mean=0, sd=1, low=0, upp=10):
